@@ -1,0 +1,34 @@
+PROJECT_NAME="dvizh i5"
+PROJECT_BRIEF="a c++ game"
+OUTPUT_LANGUAGE="Russian"
+OUTPUT_DIRECTORY="docs/"
+INPUT="src/"
+RECURSIVE="YES"
+
+
+
+# тема:
+GENERATE_TREEVIEW      = "YES" # optional. Also works without treeview
+DISABLE_INDEX = "NO"
+FULL_SIDEBAR = "YES"
+HTML_EXTRA_STYLESHEET  = "docs/doxygen-awesome-css/doxygen-awesome.css"
+HTML_COLORSTYLE        = "LIGHT" # required with Doxygen >= 1.9.5
+
+
+
+
+### важно!!
+HIDE_UNDOC_MEMBERS="NO"
+EXTRACT_PRIVATE="YES"
+INTERNAL_DOCS="NO"
+
+# графы:
+HAVE_DOT="YES"
+CLASS_GRAPH="YES"
+COLLABORATION_GRAPH = "YES"
+INCLUDE_GRAPH = "YES"
+INCLUDED_BY_GRAPH = "YES"
+
+
+
+QUIET="YES"
