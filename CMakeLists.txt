@@ -17,16 +17,17 @@ FetchContent_Declare(ftxui
 FetchContent_MakeAvailable(ftxui)
 # ------------------------------------------------------------------------------
 
-include_directories(src/net)
+include_directories(src/)
 
 add_executable(client_test src/client_test.cpp)
-add_executable(master_test src/master_test.cpp)
+add_executable(master_test_server src/master_test_server.cpp)
+add_executable(master_test_client src/master_test_client.cpp)
 add_executable(lobby_test src/lobby_test.cpp)
 add_executable(game_test src/game_test.cpp)
 
 add_subdirectory(src/net)
 
-target_link_libraries(client_test
+target_link_libraries(master_test_server
     PRIVATE client
     PRIVATE server_master
     PRIVATE server_lobby
@@ -36,4 +37,15 @@ target_link_libraries(client_test
     PRIVATE ftxui::dom
     PRIVATE ftxui::component
 )
+target_link_libraries(master_test_client
+    PRIVATE client
+    PRIVATE server_master
+    PRIVATE server_lobby
+    PRIVATE server_game
+
+    PRIVATE ftxui::screen
+    PRIVATE ftxui::dom
+    PRIVATE ftxui::component
+)
+
 # target_include_directories(client_test PRIVATE src)
