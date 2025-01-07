@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 3.27)
 project(game_networking_test
     LANGUAGES CXX
+    VERSION 0.0.0.1
 )
+add_definitions(PROJECT_VERSION=${PROJECT_VERSION})
+
 
 # --- Fetch FTXUI --------------------------------------------------------------
 include(FetchContent)

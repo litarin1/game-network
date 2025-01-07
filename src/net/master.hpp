@@ -5,9 +5,8 @@
 #include <sys/socket.h>
 
 #include <forward_list>
+#include "net_lib.cpp"
 
-// 128 chars + \n\0
-#define MAX_REQUEST_LENGTH 130
 #define COMMAND_SEPARATOR_CHAR '^'  // VERSION^1.3.2
 
 
